@@ -1,7 +1,0 @@
-xgbost , naive bayes
-
-gloab embaddeing 
-based gre ,lstm , blstm , 
-
-bert embeddings
-transform learing 
