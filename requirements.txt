@@ -1,0 +1,10 @@
+streamlit
+tensorflow
+transformers
+tf-keras
+tokenizers
+sentencepiece
+scikit-learn
+matplotlib
+pandas
+numpy
