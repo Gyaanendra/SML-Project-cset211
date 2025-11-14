@@ -105,11 +105,7 @@ def load_models():
         _GLOBAL_ENCODER = encoder
         
         # Load tokenizer directly from Hugging Face (not from local folder)
-        try:
-            tokenizer = AutoTokenizer.from_pretrained('best_tokenizer')
-        except Exception as e:
-            st.warning(f"Could not load local tokenizer: {e}. Using default roberta-base tokenizer.")
-            tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     
     with st.spinner('Loading classification model...'):
         custom_objects = {"HFEncoderLayer": HFEncoderLayer}
@@ -193,24 +189,6 @@ text_input = st.text_area(
     label_visibility="collapsed"
 )
 
-# Example texts
-st.markdown("**Quick examples:**")
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    if st.button("🛸 Aliens Example"):
-        text_input = "Aliens have landed in India and are demanding to meet the Prime Minister!"
-        st.rerun()
-
-with col2:
-    if st.button("📰 Real News Example"):
-        text_input = "The stock market showed moderate gains today as investors reacted to the latest economic data."
-        st.rerun()
-
-with col3:
-    if st.button("🎭 Sensational Example"):
-        text_input = "Scientists discover that eating chocolate cures all diseases!"
-        st.rerun()
 
 # Predict button
 if st.button("🔍 Analyze News", type="primary", use_container_width=True):
