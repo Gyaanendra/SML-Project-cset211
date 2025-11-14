@@ -109,7 +109,7 @@ def load_models():
     
     with st.spinner('Loading classification model...'):
         custom_objects = {"HFEncoderLayer": HFEncoderLayer}
-        model_path = 'best_fake_news_model.h5'
+        model_path = './best_fake_news_model.h5'
         
         if not os.path.exists(model_path):
             st.error(f"❌ Model file not found: {model_path}")
