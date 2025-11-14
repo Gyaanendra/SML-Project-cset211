@@ -1,9 +1,9 @@
 streamlit
-tensorflow
-transformers
-tf-keras
-tokenizers
-sentencepiece
+tensorflow==2.16.1
+transformers==4.44.2
+tf-keras==2.16.0
+tokenizers==0.19.1
+sentencepiece==0.2.0
 scikit-learn
 matplotlib
 pandas
