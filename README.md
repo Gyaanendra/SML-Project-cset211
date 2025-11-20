@@ -88,6 +88,16 @@ Provides two separate CSV files:
 
 ---
 
+## 🔄 Pipeline Architecture
+
+<div align="center">
+
+![Fake News Classifier Pipeline](./mermaid-diagram-2025-11-20-221651.png)
+
+</div>
+
+---
+
 ## 📁 Directory Structure
 
 ```
